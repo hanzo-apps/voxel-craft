@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chunk — a voxel sandbox</title>
+<meta name="description" content="A first-person voxel sandbox: procedural terrain, face-culled chunk meshing, and place/break editing that re-meshes only the chunk you touched.">
+<style>
+  :root { color-scheme: dark }
+  html,body { margin:0; height:100%; background:#8fc4ff; overflow:hidden;
+              font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; color:#0b1220 }
+  canvas { display:block }
+  #hud { position:fixed; left:16px; top:14px; pointer-events:none; color:#f8fafc;
+         text-shadow:0 1px 4px rgba(0,0,0,.65) }
+  #dot { position:fixed; left:50%; top:50%; translate:-50% -50%; width:6px; height:6px;
+         border:1px solid rgba(255,255,255,.85); border-radius:50%; pointer-events:none }
+  #tag { position:fixed; right:16px; bottom:12px; color:#f8fafc; opacity:.65; pointer-events:none }
+</style>
+<script src="https://a.hanzo.ai/analytics.js" data-org="hanzo" crossorigin="anonymous" defer></script>
+<script src="https://a.hanzo.ai/chat.js" data-org="hanzo" data-mode="site" crossorigin="anonymous" defer></script>
+</head>
+<body>
+<div id="hud">generating world…</div>
+<div id="dot"></div>
+<div id="tag">Chunk · three.js voxels · hanzo.app</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
